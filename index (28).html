@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apex Roofing Solutions | Roofing in Dallas &amp; Acworth, GA</title>
+<meta name="description" content="Apex Roofing Solutions: roof inspection, roof replacement, soft roof wash, residential and commercial roofing, and siding replacement in Dallas and Acworth, Georgia. Open 24 hours.">
+<link rel="icon" href="https://apexroofingsolutions.net/wp-content/uploads/2025/04/Apex_Full_color_Horizontal_.png.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1a30; --navy2:#12274a; --steel:#5d7391; --ivory:#f8f4ea; --paper:#ffffff;
+  --brass:#c9a24b; --brass2:#e8cb85; --ember:#c0492f; --ink:#14233b; --muted:#5b6b82;
+  --r:22px; --shadow:0 24px 60px -24px rgba(11,26,48,.45);
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--ivory);line-height:1.7;overflow-x:hidden}
+/* Selected text uses the site theme instead of default blue */
+::selection{background:var(--brass);color:var(--navy)}
+::-moz-selection{background:var(--brass);color:var(--navy)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:6px}
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+.wrap{width:min(1200px,92%);margin-inline:auto}
+section{padding:96px 0;position:relative}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.9rem;color:var(--ember);margin-bottom:14px}
+.kicker::before{content:"";width:34px;height:2px;background:var(--brass)}
+.title{font-size:clamp(2.2rem,4.4vw,3.6rem);margin-bottom:16px}
+.lead{color:var(--muted);max-width:640px;font-size:1.08rem}
+.center{text-align:center}.center .lead{margin-inline:auto}.center .kicker{justify-content:center}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;font-weight:700;font-size:.98rem;border:2px solid transparent;cursor:pointer;transition:.35s;position:relative;overflow:hidden;font-family:var(--sans)}
+.btn-gold{background:linear-gradient(120deg,var(--brass),var(--brass2),var(--brass));background-size:200% 100%;color:var(--navy);box-shadow:0 14px 30px -12px rgba(201,162,75,.8)}
+.btn-gold:hover{background-position:100% 0;transform:translateY(-3px)}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--navy)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--brass);color:var(--navy);transform:translateY(-3px)}
+
+/* ===== INTRO ===== */
+#intro{position:fixed;inset:0;z-index:9999;background:radial-gradient(ellipse at 50% 40%,#16315c 0%,#0b1a30 55%,#060f1d 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;transition:opacity .9s,visibility .9s,transform .9s;overflow:hidden}
+#intro.done{opacity:0;visibility:hidden;transform:scale(1.08)}
+#intro .grid{position:absolute;left:-50%;right:-50%;bottom:-10%;height:60%;background-image:linear-gradient(rgba(201,162,75,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,75,.35) 1px,transparent 1px);background-size:60px 60px;transform:perspective(500px) rotateX(68deg);animation:gridmove 2.4s linear infinite;mask-image:linear-gradient(to top,#000 20%,transparent);-webkit-mask-image:linear-gradient(to top,#000 20%,transparent)}
+@keyframes gridmove{to{background-position:0 60px}}
+#intro .scan{position:absolute;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--brass2),transparent);box-shadow:0 0 24px var(--brass);animation:scan 2.8s ease-in-out infinite}
+@keyframes scan{0%{top:8%}50%{top:92%}100%{top:8%}}
+.stage{perspective:900px;height:300px;width:260px;position:relative;margin-top:-20px;z-index:2}
+.house{position:absolute;left:50px;top:150px;width:160px;height:90px;transform-style:preserve-3d;animation:spin 7s linear infinite}
+@keyframes spin{from{transform:rotateX(-18deg) rotateY(0)}to{transform:rotateX(-18deg) rotateY(360deg)}}
+.wall{position:absolute;inset:0;border:2px solid var(--brass);background:linear-gradient(180deg,rgba(18,39,74,.92),rgba(11,26,48,.92));display:grid;place-items:center}
+.wall::after{content:"";width:34px;height:40px;border:2px solid var(--brass2);background:rgba(201,162,75,.2);box-shadow:0 0 18px rgba(232,203,133,.6)}
+.wall:nth-child(1){transform:translateZ(80px)}
+.wall:nth-child(2){transform:rotateY(90deg) translateZ(80px)}
+.wall:nth-child(3){transform:rotateY(180deg) translateZ(80px)}
+.wall:nth-child(4){transform:rotateY(270deg) translateZ(80px)}
+.roof{position:absolute;left:0;top:0;width:160px;height:0;transform-style:preserve-3d}
+.rf{position:absolute;left:-6px;bottom:0;width:172px;height:128px;transform-origin:50% 100%;clip-path:polygon(50% 0,0 100%,100% 100%);background:repeating-linear-gradient(180deg,#c0492f 0 10px,#9b3822 10px 12px)}
+.rf:nth-child(1){transform:translateZ(86px) rotateX(42deg)}
+.rf:nth-child(2){transform:rotateY(90deg) translateZ(86px) rotateX(42deg);filter:brightness(.8)}
+.rf:nth-child(3){transform:rotateY(180deg) translateZ(86px) rotateX(42deg);filter:brightness(.65)}
+.rf:nth-child(4){transform:rotateY(270deg) translateZ(86px) rotateX(42deg);filter:brightness(.8)}
+.floor{position:absolute;left:20px;top:250px;width:220px;height:220px;border-radius:50%;border:2px dashed var(--brass);transform:rotateX(75deg);animation:ring 6s linear infinite;opacity:.7}
+@keyframes ring{to{transform:rotateX(75deg) rotate(360deg)}}
+.intro-brand{display:flex;flex-direction:column;align-items:center;gap:14px;z-index:3;margin-top:24px;text-align:center;padding:0 20px}
+.intro-logo{background:#fff;padding:12px 26px;border-radius:16px;box-shadow:0 0 50px rgba(201,162,75,.45);opacity:0;transform:translateY(20px) scale(.9);animation:pop .9s .5s forwards}
+.intro-logo img{height:72px;width:auto}
+@keyframes pop{to{opacity:1;transform:none}}
+.intro-name{font-family:var(--serif);font-size:clamp(1.8rem,5vw,3rem);font-weight:700;letter-spacing:.04em;min-height:1.3em}
+.intro-name i{display:inline-block;width:3px;height:1em;background:var(--brass2);margin-left:4px;vertical-align:-.1em;animation:blink .7s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hud{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85rem;color:var(--brass2);height:1.4em}
+.bar{width:min(340px,70vw);height:6px;border-radius:9px;background:rgba(255,255,255,.12);overflow:hidden}
+.bar b{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brass),var(--brass2));box-shadow:0 0 14px var(--brass);transition:width .2s}
+.skip{position:absolute;right:22px;top:22px;z-index:4;color:#fff;border:1px solid rgba(255,255,255,.35);padding:8px 18px;border-radius:999px;background:transparent;cursor:pointer;font-family:var(--sans);font-weight:600}
+.skip:hover{background:var(--brass);color:var(--navy);border-color:var(--brass)}
+
+/* ===== HEADER ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:900;transition:.4s;padding:14px 0}
+header.solid{background:rgba(11,26,48,.94);backdrop-filter:blur(14px);padding:8px 0;box-shadow:0 10px 40px -18px #000}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;color:#fff}
+.logo-wrap{background:#fff;border-radius:14px;padding:6px 14px;box-shadow:0 8px 24px -10px rgba(0,0,0,.6);display:flex;align-items:center;transition:.4s}
+.logo-wrap img{height:52px;width:auto;object-fit:contain}
+header.solid .logo-wrap img{height:44px}
+.bn{font-family:var(--serif);font-size:1.5rem;font-weight:700;line-height:1;letter-spacing:.01em}
+.bn small{display:block;font-family:var(--sans);font-size:.7rem;font-weight:600;color:var(--brass2);margin-top:4px;letter-spacing:.14em}
+nav ul{list-style:none;display:flex;gap:4px;align-items:center}
+nav li{position:relative}
+nav a.l{display:block;color:#fff;font-weight:600;font-size:.93rem;padding:10px 14px;border-radius:999px;transition:.3s}
+nav a.l:hover,nav a.l.active{background:rgba(201,162,75,.18);color:var(--brass2)}
+.dd{position:absolute;top:100%;left:0;min-width:250px;background:var(--navy);border:1px solid rgba(201,162,75,.35);border-radius:18px;padding:10px;opacity:0;visibility:hidden;transform:translateY(12px) rotateX(-12deg);transform-origin:top;transition:.35s;box-shadow:var(--shadow)}
+nav li:hover>.dd,nav li:focus-within>.dd{opacity:1;visibility:visible;transform:none}
+.dd a{display:block;color:#e8edf5;padding:10px 14px;border-radius:10px;font-size:.92rem;font-weight:500}
+.dd a:hover{background:var(--brass);color:var(--navy)}
+.callbtn{padding:11px 22px;font-size:.9rem}
+.burger{display:none;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;padding:150px 0 90px;background:radial-gradient(circle at 80% 20%,#1d3c70 0%,transparent 45%),linear-gradient(160deg,#0b1a30,#10264a 60%,#0b1a30);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(circle at 50% 50%,#000,transparent 75%);-webkit-mask-image:radial-gradient(circle at 50% 50%,#000,transparent 75%)}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:float 12s ease-in-out infinite}
+.b1{width:340px;height:340px;background:var(--brass);top:8%;left:-6%}
+.b2{width:300px;height:300px;background:var(--ember);bottom:-8%;right:12%;animation-delay:-5s}
+@keyframes float{50%{transform:translate(40px,-50px) scale(1.12)}}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.8rem,6.2vw,5.4rem);margin-bottom:22px}
+.shine{background:linear-gradient(90deg,var(--brass2),#fff,var(--brass),var(--brass2));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:250% 0}}
+.hero p{color:#cdd8e8;font-size:1.15rem;max-width:560px;margin-bottom:34px}
+.hero .cta{display:flex;gap:16px;flex-wrap:wrap}
+.hstats{display:flex;gap:34px;margin-top:46px;flex-wrap:wrap}
+.hstats div b{font-family:var(--serif);font-size:2.4rem;color:var(--brass2);display:block;line-height:1}
+.hstats div span{font-size:.88rem;color:#aebbd0}
+.hero-visual{perspective:1100px}
+.frame{position:relative;border-radius:30px;transform-style:preserve-3d;transition:transform .2s;border:1px solid rgba(201,162,75,.55);padding:12px;background:rgba(255,255,255,.06);backdrop-filter:blur(6px);box-shadow:0 50px 90px -30px #000}
+.frame img{border-radius:20px;width:100%;height:520px;object-fit:cover}
+.chip{position:absolute;background:#fff;color:var(--navy);border-radius:16px;padding:12px 18px;font-weight:700;font-size:.9rem;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;animation:bob 5s ease-in-out infinite}
+.chip em{font-style:normal;font-size:1.4rem}
+.c1{left:-34px;bottom:70px}
+.c2{right:-24px;top:40px;animation-delay:-2.5s}
+@keyframes bob{50%{transform:translateY(-14px)}}
+.scrollcue{position:absolute;bottom:26px;left:50%;width:26px;height:44px;border:2px solid rgba(255,255,255,.5);border-radius:20px;z-index:2}
+.scrollcue::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;border-radius:4px;background:var(--brass2);transform:translateX(-50%);animation:cue 1.6s infinite}
+@keyframes cue{60%{top:22px;opacity:0}}
+
+/* Page hero (inner pages) */
+.phero{padding:190px 0 110px;color:#fff;background:linear-gradient(160deg,rgba(11,26,48,.95),rgba(18,39,74,.88)),var(--bg,none) center/cover;position:relative;overflow:hidden}
+.phero::after{content:"";position:absolute;inset:auto 0 -1px 0;height:60px;background:var(--ivory);clip-path:polygon(0 100%,100% 100%,100% 0,50% 70%,0 0)}
+.phero h1{font-size:clamp(2.6rem,5.6vw,4.6rem);margin-bottom:16px}
+.phero p{color:#cdd8e8;max-width:680px;font-size:1.12rem}
+.crumbs{font-size:.9rem;color:var(--brass2);margin-bottom:18px;font-weight:600}
+.crumbs a:hover{text-decoration:underline}
+
+/* ===== CARDS ===== */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:56px}
+.card{background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:0 14px 40px -24px rgba(11,26,48,.5);transition:transform .25s,box-shadow .4s;transform-style:preserve-3d;display:flex;flex-direction:column}
+.card:hover{box-shadow:var(--shadow)}
+.card .im{height:230px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--navy2),var(--steel))}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.card:hover .im img{transform:scale(1.1)}
+.card .im::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,26,48,.65));pointer-events:none}
+.tag{position:absolute;left:18px;bottom:14px;z-index:2;font-weight:700;font-size:.85rem;background:rgba(201,162,75,.95);color:var(--navy);padding:4px 14px;border-radius:999px}
+.card .bd{padding:26px 26px 30px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card h3{font-size:1.7rem}
+.card p{color:var(--muted);font-size:.98rem;flex:1}
+.more{font-weight:800;color:var(--ember);display:inline-flex;gap:8px;align-items:center;transition:.3s}
+.card:hover .more{gap:16px;color:var(--navy)}
+.center-btn{text-align:center;margin-top:50px}
+
+/* Dark sections */
+.dark{background:linear-gradient(160deg,#0b1a30,#13294d);color:#fff;overflow:hidden}
+.dark .lead{color:#b8c6db}.dark .kicker{color:var(--brass2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img{position:relative}
+.about-img .main{border-radius:var(--r);height:480px;width:100%;object-fit:cover;box-shadow:var(--shadow)}
+.about-img .badge{position:absolute;right:-18px;bottom:30px;background:var(--brass);color:var(--navy);padding:22px 26px;border-radius:20px;text-align:center;box-shadow:var(--shadow);animation:bob 6s ease-in-out infinite;font-weight:700}
+.about-img .badge b{font-family:var(--serif);font-size:2.6rem;display:block;line-height:1}
+.ticks{list-style:none;margin:22px 0 32px;display:grid;gap:12px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks li::before{content:"✔";color:var(--navy);background:var(--brass);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:.72rem;flex:none;margin-top:2px}
+
+/* Why choose */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:54px}
+.why>div{background:var(--navy);color:#fff;border:1px solid rgba(201,162,75,.4);border-radius:var(--r);padding:32px 26px;transition:.4s}
+.why>div:hover{background:#162f58;transform:translateY(-8px)}
+.why .ic{font-size:2.2rem;margin-bottom:14px;display:inline-block}
+.why h4{font-size:1.45rem;margin-bottom:8px;color:var(--brass2)}
+.why p{color:#b8c6db;font-size:.95rem}
+
+/* Reviews */
+.rev{background:var(--paper);border-radius:var(--r);padding:34px 30px;box-shadow:0 14px 40px -24px rgba(11,26,48,.5);position:relative;transition:transform .25s,opacity .9s}
+.rev::before{content:"“";font-family:var(--serif);font-size:7rem;color:var(--brass);opacity:.35;position:absolute;top:-6px;right:22px;line-height:1}
+.stars{color:var(--brass);letter-spacing:3px;font-size:1.1rem;margin-bottom:12px}
+.who{display:flex;align-items:center;gap:14px;margin-top:20px}
+.av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--steel));color:var(--brass2);display:grid;place-items:center;font-weight:800}
+.who small{color:var(--muted);display:block;line-height:1.3}
+
+/* FAQ */
+.faq{max-width:860px;margin:50px auto 0;display:grid;gap:14px;text-align:left}
+.fq{background:var(--paper);border-radius:18px;box-shadow:0 10px 30px -22px rgba(11,26,48,.6);overflow:hidden;border:1px solid transparent;transition:border-color .3s,opacity .9s,transform .9s}
+.fq.open{border-color:var(--brass)}
+.fq button{width:100%;text-align:left;background:none;border:0;padding:22px 26px;font-family:var(--serif);font-size:1.35rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.fq button span{width:34px;height:34px;border-radius:50%;background:var(--navy);color:var(--brass2);display:grid;place-items:center;flex:none;transition:.4s;font-family:var(--sans)}
+.fq.open button span{transform:rotate(45deg);background:var(--brass);color:var(--navy)}
+.fq .a{max-height:0;overflow:hidden;transition:max-height .5s;padding:0 26px;color:var(--muted)}
+.fq.open .a{padding-bottom:24px}
+
+/* Map */
+.mapbox{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:6px solid #fff;line-height:0}
+.mapbox iframe{width:100%;height:460px;border:0}
+
+/* CTA band */
+.band{background:linear-gradient(120deg,var(--brass),var(--brass2));color:var(--navy);padding:70px 0;text-align:center}
+.band h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:12px}
+.band p{max-width:620px;margin:0 auto 26px}
+.band .btn{margin:4px}
+
+/* Service page */
+.svc-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:start}
+.svc-grid img.big{border-radius:var(--r);width:100%;height:420px;object-fit:cover;box-shadow:var(--shadow);margin-bottom:34px}
+.side{position:sticky;top:110px;background:var(--navy);color:#fff;border-radius:var(--r);padding:34px;box-shadow:var(--shadow)}
+.side h3{font-size:1.8rem;margin-bottom:10px;color:var(--brass2)}
+.side p{color:#b8c6db;margin-bottom:18px}
+.side .btn{width:100%;justify-content:center;margin-bottom:10px}
+.side ul{list-style:none;margin-top:18px;border-top:1px solid rgba(255,255,255,.15);padding-top:16px}
+.side ul a{display:block;padding:9px 0;color:#dce5f2;font-weight:600;border-bottom:1px solid rgba(255,255,255,.08);transition:.3s}
+.side ul a:hover,.side ul a.cur{color:var(--brass2);padding-left:10px}
+.steps{display:grid;gap:18px;margin-top:26px;counter-reset:s}
+.step{display:flex;gap:18px;align-items:center;background:var(--paper);padding:22px;border-radius:18px;box-shadow:0 10px 30px -22px rgba(11,26,48,.6);counter-increment:s}
+.step::before{content:counter(s);width:46px;height:46px;flex:none;border-radius:50%;background:var(--navy);color:var(--brass2);display:grid;place-items:center;font-family:var(--serif);font-size:1.5rem;font-weight:700}
+.step h4{font-size:1.35rem;margin-bottom:2px}
+.step p{color:var(--muted);font-size:.96rem;margin:0}
+.prose h2{font-size:2.3rem;margin:34px 0 12px}
+.prose p{color:var(--muted);margin-bottom:14px}
+
+/* Roof types */
+.rtype .im{height:190px;display:grid;place-items:center;font-size:4rem}
+.rtype .im::after{display:none}
+.spec{display:flex;gap:10px;flex-wrap:wrap}
+.spec span{background:var(--ivory);padding:4px 14px;border-radius:999px;font-size:.82rem;font-weight:700;color:var(--navy)}
+
+/* Gallery */
+.gal{columns:3;column-gap:20px;margin-top:10px}
+.gal figure{break-inside:avoid;margin-bottom:20px;border-radius:var(--r);overflow:hidden;position:relative;cursor:zoom-in;background:linear-gradient(135deg,var(--navy2),var(--steel));min-height:180px}
+.gal img{width:100%;transition:.7s}
+.gal figure:hover img{transform:scale(1.08)}
+.gal figcaption{position:absolute;inset:auto 0 0 0;padding:40px 20px 16px;color:#fff;font-weight:700;background:linear-gradient(transparent,rgba(11,26,48,.9));transform:translateY(100%);transition:.4s}
+.gal figure:hover figcaption{transform:none}
+#lb{position:fixed;inset:0;background:rgba(6,15,29,.94);z-index:2000;display:none;place-items:center;padding:30px;cursor:zoom-out}
+#lb.on{display:grid}
+#lb img{max-height:88vh;border-radius:16px;box-shadow:0 0 70px rgba(201,162,75,.4)}
+
+/* Areas + contact */
+.area-card{padding:34px;text-align:left}
+.area-card .pin{font-size:2.2rem}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.towns span{background:var(--paper);padding:9px 18px;border-radius:999px;font-weight:600;box-shadow:0 8px 20px -14px rgba(11,26,48,.6)}
+.cgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}
+.cinfo{display:grid;gap:18px;align-content:start}
+.ci{display:flex;gap:16px;background:var(--paper);padding:22px;border-radius:18px;box-shadow:0 10px 30px -22px rgba(11,26,48,.6)}
+.ci .i{width:52px;height:52px;border-radius:14px;background:var(--navy);display:grid;place-items:center;font-size:1.4rem;flex:none}
+.ci h4{font-size:1.25rem}.ci a:hover{color:var(--ember)}
+form.cf{background:var(--navy);color:#fff;padding:40px;border-radius:var(--r);box-shadow:var(--shadow);display:grid;gap:16px}
+.cf h3{font-size:2rem;color:var(--brass2)}
+.cf input,.cf select,.cf textarea{width:100%;padding:15px 18px;border-radius:14px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);color:#fff;font-family:var(--sans);font-size:1rem}
+.cf select option{color:#000}
+.cf input::placeholder,.cf textarea::placeholder{color:#9fb0c9}
+.cf input:focus,.cf select:focus,.cf textarea:focus{outline:none;border-color:var(--brass);background:rgba(255,255,255,.12)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* Footer */
+footer{background:#07111f;color:#b5c2d6;padding:80px 0 0;position:relative}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--ember),var(--brass),var(--ember))}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.3fr;gap:44px}
+footer h4{color:#fff;font-size:1.5rem;margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer a:hover{color:var(--brass2)}
+footer .logo-wrap{display:inline-flex;margin-bottom:16px}
+footer .logo-wrap img{height:54px}
+footer li{display:flex;gap:10px}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:56px;padding:22px 0;text-align:center;font-size:.9rem}
+.fab{position:fixed;right:22px;bottom:22px;z-index:800;display:grid;gap:12px}
+.fab a,.fab button{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:1.4rem;border:0;cursor:pointer;box-shadow:0 14px 30px -10px rgba(0,0,0,.6);transition:.3s}
+.fab .call{background:var(--brass);color:var(--navy);animation:pulse 2s infinite}
+.fab .top{background:var(--navy);color:var(--brass2);opacity:0;pointer-events:none}
+.fab .top.on{opacity:1;pointer-events:auto}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(201,162,75,.7)}100%{box-shadow:0 0 0 22px rgba(201,162,75,0)}}
+
+/* Reveal + page transition */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+#app{animation:pg .7s}
+@keyframes pg{from{opacity:0;transform:translateY(24px)}}
+
+/* Responsive */
+@media(max-width:1020px){
+  .hero-grid,.about-grid,.svc-grid,.cgrid{grid-template-columns:1fr}
+  .grid3{grid-template-columns:repeat(2,1fr)}.why{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr}.gal{columns:2}
+  .side{position:static}.frame img{height:380px}
+  .burger{display:block;position:relative;z-index:950}
+  nav{position:fixed;top:0;right:-100%;width:min(340px,88vw);height:100vh;background:var(--navy);padding:90px 24px 30px;transition:.5s;overflow-y:auto;box-shadow:-20px 0 60px rgba(0,0,0,.5)}
+  nav.open{right:0}
+  nav ul{flex-direction:column;align-items:stretch;gap:2px}
+  .dd{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:0;box-shadow:none;padding:0 0 6px 14px;min-width:0}
+  .callbtn{display:none}
+  .nav{justify-content:space-between}
+}
+@media(max-width:640px){
+  section{padding:72px 0}.grid3,.grid2,.why,.fgrid,.row2{grid-template-columns:1fr}.gal{columns:1}
+  .bn{font-size:1.1rem}.bn small{display:none}.logo-wrap img{height:38px}.hero{padding-top:130px}
+  .c1,.c2{display:none}.about-img .badge{right:10px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- ===== 3D DIGITAL INTRO ===== -->
+<div id="intro" aria-label="Loading Apex Roofing Solutions">
+  <button class="skip" id="skip">Skip intro</button>
+  <div class="grid"></div><div class="scan"></div>
+  <div class="stage">
+    <div class="floor"></div>
+    <div class="house">
+      <div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div>
+      <div class="roof"><div class="rf"></div><div class="rf"></div><div class="rf"></div><div class="rf"></div></div>
+    </div>
+  </div>
+  <div class="intro-brand">
+    <div class="intro-logo"><img src="https://apexroofingsolutions.net/wp-content/uploads/2025/04/Apex_Full_color_Horizontal_.png.webp" alt="Apex Roofing Solutions logo"></div>
+    <div class="intro-name"><span id="typed"></span><i></i></div>
+    <div class="hud" id="hud">Scanning roofline...</div>
+    <div class="bar"><b id="pbar"></b></div>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#/home" aria-label="Apex Roofing Solutions home">
+      <span class="logo-wrap"><img src="https://apexroofingsolutions.net/wp-content/uploads/2025/04/Apex_Full_color_Horizontal_.png.webp" alt="Apex Roofing Solutions logo"></span>
+      <span class="bn">Apex Roofing Solutions<small>Dallas &amp; Acworth, GA</small></span>
+    </a>
+    <nav id="nav" aria-label="Main menu">
+      <ul>
+        <li><a class="l" href="#/home" data-r="home">Home</a></li>
+        <li><a class="l" href="#/about" data-r="about">About Us</a></li>
+        <li><a class="l" href="#/services" data-r="services">Services ▾</a>
+          <div class="dd" id="ddServices"></div></li>
+        <li><a class="l" href="#/roof-types" data-r="roof-types">Types of Roofs</a></li>
+        <li><a class="l" href="#/areas" data-r="areas">Service Areas ▾</a>
+          <div class="dd">
+            <a href="#/area/dallas">Roofing in Dallas, GA</a>
+            <a href="#/area/acworth">Roofing in Acworth, GA</a>
+            <a href="#/areas">All Service Areas</a>
+          </div></li>
+        <li><a class="l" href="#/gallery" data-r="gallery">Gallery</a></li>
+        <li><a class="l" href="#/contact" data-r="contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-gold callbtn" href="tel:+14707378742">📞 (470) 737-8742</a>
+    <button class="burger" id="burger" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <span class="logo-wrap"><img src="https://apexroofingsolutions.net/wp-content/uploads/2025/04/Apex_Full_color_Horizontal_.png.webp" alt="Apex Roofing Solutions logo"></span>
+      <p>A family-owned roofing company serving homeowners and businesses across Georgia with repairs, replacements, and insurance restoration.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/about">About Us</a></li>
+        <li><a href="#/services">Services</a></li>
+        <li><a href="#/roof-types">Types of Roofs</a></li>
+        <li><a href="#/areas">Service Areas</a></li>
+        <li><a href="#/gallery">Gallery</a></li>
+        <li><a href="#/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Our Services</h4>
+      <ul id="footSvc"></ul>
+    </div>
+    <div>
+      <h4>Contact Information</h4>
+      <ul>
+        <li>📍 <span>37 Palace Pt, Dallas, GA 30132</span></li>
+        <li>📞 <a href="tel:+14707378742">(470) 737-8742</a></li>
+        <li>✉️ <a href="mailto:andrew@apexroofingsolution.net">andrew@apexroofingsolution.net</a></li>
+        <li>🕒 <span>Working Hours: Open 24 Hours</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copy">© <span id="yr"></span> Apex Roofing Solutions. All rights reserved. · <a href="https://apexroofingsolutions.net/" target="_blank" rel="noopener">Official website</a></div>
+</footer>
+
+<div class="fab">
+  <a class="call" href="tel:+14707378742" aria-label="Call Apex Roofing Solutions">📞</a>
+  <button class="top" id="toTop" aria-label="Back to top">↑</button>
+</div>
+<div id="lb"><img alt="Enlarged gallery photo"></div>
+
+<script>
+/* ================= DATA ================= */
+const MAP='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d644412.0638544686!2d-84.57014!3d34.07778695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4f19797aec77d20b%3A0xd860033a0867a6f4!2sApex%20Roofing%20Solutions!5e1!3m2!1sen!2s!4v1791842572972!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Apex Roofing Solutions on Google Maps"></iframe>';
+
+const SERVICES=[
+ {id:"roof-inspection",name:"Roof Inspection",icon:"🔍",
+  img:"https://avatars.mds.yandex.net/i?id=9effe93c5f35c40c32628e83c4bd5df40dd210a3-9837641-images-thumbs&n=13",
+  short:"A careful top-to-bottom check that finds leaks, wear, and storm damage before they become expensive.",
+  intro:"Catch small roof problems early and know exactly where your roof stands.",
+  body:["Our inspectors walk the entire roof surface and check shingles, flashing, vents, gutters, and the attic space for moisture and ventilation issues.","You receive a clear written summary with photos, so you can plan repairs, a replacement, or an insurance claim with confidence."],
+  pts:["Shingle, flashing, and vent check","Storm and hail damage assessment","Attic and ventilation review","Photo report for insurance claims","Honest repair-or-replace advice"],
+  steps:[["Book your visit","Call us any time. We are open 24 hours."],["On-roof inspection","We examine every slope, seam, and penetration."],["Photo report","You get findings in plain language with pictures."],["Next steps","We explain your options and the costs involved."]]},
+ {id:"roof-replacement",name:"Roof Replacement",icon:"🏠",
+  img:"https://avatars.mds.yandex.net/i?id=2109758b66c793739c3899b29b65a41cc9f0a46b-5647646-images-thumbs&n=13",
+  short:"Complete tear-off and installation with premium materials, built to protect your property for decades.",
+  intro:"A new roof installed cleanly, on schedule, and built to last.",
+  body:["When repairs no longer make sense, we remove the old roof, inspect the decking, and install a new system with quality underlayment, flashing, and ventilation.","We protect your landscaping, clean up daily, and finish with a magnetic sweep of the property."],
+  pts:["Full tear-off and decking check","Premium shingle, metal, and flat systems","Upgraded underlayment and flashing","Daily site cleanup and magnet sweep","Workmanship-backed installation"],
+  steps:[["Free estimate","We measure, inspect, and present clear options."],["Material selection","Choose the style and color that suits your property."],["Installation","Our crew removes and replaces your roof efficiently."],["Final walkthrough","We review the finished roof together with you."]]},
+ {id:"soft-roof-wash",name:"Soft Roof Wash",icon:"💧",
+  img:"https://avatars.mds.yandex.net/i?id=27dcfcc8c06d848051b46c85b8e0a24bad85362f-5285620-images-thumbs&n=13",
+  short:"Low-pressure cleaning that removes black streaks, algae, and moss without damaging your shingles.",
+  intro:"Restore your roof's appearance and extend its life, gently.",
+  body:["Georgia humidity feeds algae, moss, and lichen on roofs. High-pressure washing strips granules and shortens roof life, so we use a soft-wash method instead.","A biodegradable cleaning solution lifts growth at the root, then a low-pressure rinse leaves the roof clean and bright."],
+  pts:["Removes black streaks, algae, and moss","Low pressure protects shingle granules","Safe for plants and landscaping","Boosts curb appeal immediately","Slows future growth"],
+  steps:[["Surface check","We confirm your roof is suitable for washing."],["Protect the property","Plants and fixtures are covered and wetted."],["Soft-wash treatment","Solution is applied and left to work."],["Gentle rinse","We rinse thoroughly and clean the grounds."]]},
+ {id:"residential-roofing",name:"Residential Roofing",icon:"🏡",
+  img:"https://avatars.mds.yandex.net/i?id=8ee92b3a6ab5b5770ae1301d5e03ae9be8dfd3c4-5579871-images-thumbs&n=13",
+  short:"Repairs, replacements, and insurance restoration for homes, handled with a family-owned touch.",
+  intro:"Roofing care for your home from a family-owned team that treats it like our own.",
+  body:["From a few missing shingles to a full re-roof after a storm, we handle every kind of residential roofing job and keep you informed at every step.","We also work directly with your insurance company to document damage and simplify the restoration process."],
+  pts:["Leak and storm damage repair","Full home re-roofing","Insurance restoration support","Gutter and flashing work","Clear, upfront estimates"],
+  steps:[["Tell us the problem","Describe the leak, damage, or goal for your home."],["Inspection and quote","We assess the roof and give a clear estimate."],["Repair or install","Our crew completes the work with care."],["Follow-up","We make sure you are completely satisfied."]]},
+ {id:"commercial-roofing",name:"Commercial Roofing",icon:"🏢",
+  img:"https://avatars.mds.yandex.net/i?id=dd8fa6e7bbd016635198ad872019e8f4c3f3a86f-12569941-images-thumbs&n=13",
+  short:"Durable flat and low-slope roofing systems that keep your business protected and operating.",
+  intro:"Reliable roofing for offices, retail, warehouses, and multi-unit properties.",
+  body:["Commercial roofs have different needs than homes. We install and repair flat and low-slope systems with minimal disruption to your daily operations.","Planned maintenance and inspections help you control long-term costs and avoid emergency repairs."],
+  pts:["TPO, EPDM, and modified bitumen systems","Leak detection and emergency repair","Scheduled maintenance programs","Minimal business disruption","Detailed project documentation"],
+  steps:[["Site assessment","We evaluate roof condition and drainage."],["Proposal","You receive scope, timeline, and pricing."],["Installation or repair","Work is scheduled around your business."],["Maintenance plan","Optional inspections keep your roof healthy."]]},
+ {id:"siding-replacement",name:"Siding Replacement",icon:"🧱",
+  img:"https://avatars.mds.yandex.net/i?id=b7ab8a2aa17cf404482d1042293345654151bb55-13201131-images-thumbs&n=13",
+  short:"Fresh, weather-resistant siding that improves protection, energy efficiency, and curb appeal.",
+  intro:"Give your exterior a new look and stronger protection against Georgia weather.",
+  body:["Damaged or aging siding lets moisture in and drives up energy bills. We replace it with durable materials that suit your home's style.","Because we are roofing specialists, we make sure the roofline, flashing, and siding work together as one weather-tight system."],
+  pts:["Vinyl and fiber-cement options","Moisture barrier and insulation check","Wide range of colors and profiles","Improved energy efficiency","Seamless roofline integration"],
+  steps:[["Exterior review","We inspect the walls for damage and moisture."],["Choose your look","Select material, color, and trim details."],["Removal and install","Old siding comes off, new siding goes on."],["Final inspection","We check every seam and finish detail."]]}
+];
+
+const ROOFS=[
+ {n:"Asphalt Shingle",e:"🏠",c:"linear-gradient(135deg,#3b4a63,#1b2a44)",d:"The most popular roofing choice in Georgia. Affordable, versatile, and available in many colors.",s:["15–30 yrs","Budget friendly","Low upkeep"]},
+ {n:"Architectural Shingle",e:"🏘️",c:"linear-gradient(135deg,#6b4a3a,#3a2519)",d:"Thicker, dimensional shingles with a richer look and better wind resistance than standard 3-tab.",s:["25–35 yrs","Premium look","Wind resistant"]},
+ {n:"Metal Roofing",e:"🛡️",c:"linear-gradient(135deg,#8ea2bd,#4c6384)",d:"Standing seam or metal shingle panels that shed rain, resist fire, and last for generations.",s:["40–70 yrs","Energy efficient","Fire resistant"]},
+ {n:"Tile Roofing",e:"🏺",c:"linear-gradient(135deg,#c0492f,#7e2b1a)",d:"Clay or concrete tiles offer a distinctive style and outstanding durability in hot climates.",s:["50+ yrs","Heat resistant","Heavy-duty"]},
+ {n:"Flat / Low-Slope (TPO, EPDM)",e:"🏢",c:"linear-gradient(135deg,#aab6c8,#6f7f98)",d:"Single-ply membrane systems ideal for commercial buildings, additions, and modern home designs.",s:["20–30 yrs","Commercial","Reflective"]},
+ {n:"Slate & Synthetic Slate",e:"🏰",c:"linear-gradient(135deg,#2d3846,#111a28)",d:"A luxury roofing option with an elegant natural appearance and exceptional longevity.",s:["60–100 yrs","Luxury","Fireproof"]}
+];
+
+/* Replace these sample reviews with your real customer reviews */
+const REVIEWS=[
+ {n:"Homeowner",t:"Dallas, GA",q:"The crew showed up on time, explained everything, and left the yard cleaner than they found it. Our new roof looks fantastic."},
+ {n:"Homeowner",t:"Acworth, GA",q:"After the storm they inspected quickly, documented the damage, and helped us through the insurance process. Stress-free from start to finish."},
+ {n:"Business Owner",t:"Commercial Client",q:"Professional, responsive, and fair on price. Our building's roof was repaired with almost no disruption to the business."}
+];
+
+const FAQS=[
+ ["How do I know if I need a roof repair or a full replacement?","Missing shingles, active leaks, sagging areas, or a roof near the end of its lifespan are common signs. A professional inspection tells you exactly which option makes sense and why."],
+ ["Do you help with insurance claims?","Yes. We specialize in insurance restoration, document storm damage with photos, and work with your adjuster to make the process simpler."],
+ ["How long does a roof replacement take?","Most homes are completed in one to three days depending on size, roof complexity, and weather. We will give you a clear timeline in your estimate."],
+ ["Is soft washing safe for my roof?","Yes. Soft washing uses low pressure and a gentle cleaning solution, so your shingles keep their protective granules while algae and moss are removed."],
+ ["Which areas do you serve?","We serve Dallas and Acworth, Georgia, along with surrounding communities. Call us to confirm service for your address."],
+ ["Are you available for emergencies?","We are open 24 hours. Call (470) 737-8742 any time for urgent leaks or storm damage."]
+];
+
+const WHY=[
+ ["👨‍👩‍👧","Family-owned and local","A Georgia family business that treats every property with personal care."],
+ ["🏅","Excellence in every detail","Quality materials and skilled installation, from tear-off to final cleanup."],
+ ["🧾","Insurance restoration experts","We document damage and guide you through the claim process."],
+ ["⏰","Open 24 hours","Storm damage doesn't wait. Neither do we. Call any time."]
+];
+
+const AREAS={
+ dallas:{n:"Dallas, GA",img:SERVICES[1].img,t:"Roofing in Dallas, Georgia",
+  p:"Our home base. From our office on Palace Point, our crews reach Dallas homes and businesses quickly for inspections, repairs, replacements, and insurance restoration.",
+  nb:["Downtown Dallas","Hiram","Powder Springs","Villa Rica","Paulding County"]},
+ acworth:{n:"Acworth, GA",img:SERVICES[3].img,t:"Roofing in Acworth, Georgia",
+  p:"Acworth homeowners and businesses trust Apex for dependable roofing, soft roof washing, and siding replacement. We handle everything from small repairs to complete roof systems.",
+  nb:["Downtown Acworth","Kennesaw","Woodstock","Marietta","Cobb County"]}
+};
+
+/* ================= HELPERS ================= */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const imgTag=(src,alt,cls="")=>`<img class="${cls}" src="${src}" alt="${alt}" loading="lazy" onerror="this.style.opacity=0">`;
+const svcCard=(s)=>`<article class="card tilt rv">
+  <div class="im">${imgTag(s.img,s.name+" service by Apex Roofing Solutions")}<span class="tag">${s.icon} ${s.name}</span></div>
+  <div class="bd"><h3>${s.name}</h3><p>${s.short}</p>
+  <a class="more" href="#/service/${s.id}">Explore ${s.name} <span>→</span></a></div></article>`;
+const phero=(title,sub,crumb,bg="")=>`<section class="phero" style="${bg?`--bg:url('${bg}')`:''}"><div class="blob b1"></div><div class="wrap">
+  <div class="crumbs"><a href="#/home">Home</a> / ${crumb}</div><h1>${title}</h1><p>${sub}</p></div></section>`;
+const ctaBand=()=>`<div class="band"><div class="wrap"><h2>Need a roof you can trust?</h2><p>Call us any time, day or night, or request a free inspection online.</p>
+  <a class="btn btn-dark" href="tel:+14707378742">📞 Call (470) 737-8742</a> <a class="btn btn-dark" href="#/contact">Request an estimate</a></div></div>`;
+const faqHTML=()=>`<div class="faq">${FAQS.map(f=>`<div class="fq rv"><button aria-expanded="false">${f[0]}<span>+</span></button><div class="a"><p>${f[1]}</p></div></div>`).join("")}</div>`;
+
+/* ================= PAGES ================= */
+const pages={
+home:()=>`
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Roofing built to <span class="shine">protect what matters</span></h1>
+      <p>Apex Roofing Solutions delivers premium roof repair, replacement, and insurance restoration for homes and businesses in Dallas and Acworth, Georgia.</p>
+      <div class="cta"><a class="btn btn-gold" href="#/services">Explore Services</a><a class="btn btn-ghost" href="#/contact">Get a Free Estimate</a></div>
+      <div class="hstats">
+        <div><b data-c="24">0</b><span>Hours open, every day</span></div>
+        <div><b data-c="6">0</b><span>Core services</span></div>
+        <div><b data-c="100" data-s="%">0</b><span>Family-owned commitment</span></div>
+      </div>
+    </div>
+    <div class="hero-visual"><div class="frame" id="frame">
+      ${imgTag(SERVICES[1].img,"New roof installed by Apex Roofing Solutions")}
+      <div class="chip c1"><em>🛡️</em>Insurance restoration</div>
+      <div class="chip c2"><em>⭐</em>Trusted in Georgia</div>
+    </div></div>
+  </div>
+  <div class="scrollcue"></div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <span class="kicker">What we do</span>
+    <h2 class="title">Our Roofing Services</h2>
+    <p class="lead">Everything your roof and exterior need, from the first inspection to the final cleanup.</p>
+    <div class="grid3" style="text-align:left">${SERVICES.map(svcCard).join("")}</div>
+    <div class="center-btn"><a class="btn btn-dark" href="#/services">Explore Services</a></div>
+  </div>
+</section>
+
+<section class="dark" id="about-home">
+  <div class="blob b1" style="opacity:.18"></div>
+  <div class="wrap about-grid">
+    <div class="about-img rv">${imgTag(SERVICES[3].img,"Residential roofing by Apex Roofing Solutions","main")}
+      <div class="badge"><b>Family</b>owned &amp; operated</div></div>
+    <div class="rv">
+      <span class="kicker">About Apex Roofing Solutions</span>
+      <h2 class="title">A small family business that grew on trust</h2>
+      <p class="lead">Apex Roofing Solutions began with determination and a commitment to excellence in the heart of Georgia. Today we are a trusted name in Dallas and Acworth for roof repairs, replacements, and insurance restoration.</p>
+      <ul class="ticks"><li>Quality repairs and replacements for homes and businesses</li><li>Insurance restoration handled with care</li><li>Honest advice and clear communication</li></ul>
+      <a class="btn btn-gold" href="#/about">Learn more about us</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <span class="kicker">Why choose us</span>
+    <h2 class="title">Why Georgia Homeowners Choose Apex</h2>
+    <p class="lead">Craftsmanship, honesty, and availability whenever you need us.</p>
+    <div class="why" style="text-align:left">${WHY.map(w=>`<div class="rv"><span class="ic">${w[0]}</span><h4>${w[1]}</h4><p>${w[2]}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section style="background:#efe9da">
+  <div class="wrap center">
+    <span class="kicker">Customer reviews</span>
+    <h2 class="title">What Our Customers Say</h2>
+    <p class="lead">Feedback from homeowners and business owners we have served.</p>
+    <div class="grid3" style="text-align:left">${REVIEWS.map(r=>`<div class="rev tilt rv"><div class="stars">★★★★★</div><p>${r.q}</p>
+      <div class="who"><div class="av">${r.n.charAt(0)}</div><div><b>${r.n}</b><small>${r.t}</small></div></div></div>`).join("")}</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <span class="kicker">FAQs</span>
+    <h2 class="title">Frequently Asked Questions</h2>
+    <p class="lead">Quick answers to the questions we hear most.</p>
+    ${faqHTML()}
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap center">
+    <span class="kicker">Find us</span>
+    <h2 class="title">Visit Apex Roofing Solutions</h2>
+    <p class="lead">37 Palace Pt, Dallas, GA 30132 · Open 24 Hours</p>
+    <div class="mapbox rv" style="margin-top:44px">${MAP}</div>
+  </div>
+</section>
+${ctaBand()}`,
+
+about:()=>`
+${phero("About Apex Roofing Solutions","A family-owned Georgia roofing company built on determination, honesty, and craftsmanship.","About Us",SERVICES[3].img)}
+<section><div class="wrap about-grid">
+  <div class="rv prose"><span class="kicker">Our story</span><h2 class="title" style="margin-top:0">From a small family business to a trusted name</h2>
+    <p>Apex Roofing Solutions started as a small, family-owned business in the heart of Georgia. With determination and a commitment to excellence, we have grown into a trusted name in the Dallas and Acworth roofing industry.</p>
+    <p>Our goal has always been simple: give homeowners and businesses in Georgia the highest quality roof repairs, replacements, and insurance restoration services, delivered with honesty and respect.</p>
+    <a class="btn btn-gold" href="https://apexroofingsolutions.net/about-us/" target="_blank" rel="noopener">Read more on our official site</a></div>
+  <div class="about-img rv">${imgTag(SERVICES[1].img,"Apex Roofing Solutions crew at work","main")}<div class="badge"><b>24/7</b>always available</div></div>
+</div></section>
+<section class="dark"><div class="wrap center"><span class="kicker">Our values</span><h2 class="title">What guides every job</h2>
+  <div class="why" style="grid-template-columns:repeat(3,1fr);text-align:left">
+   <div class="rv"><span class="ic">🤝</span><h4>Integrity</h4><p>Clear estimates, honest advice, and no surprise charges.</p></div>
+   <div class="rv"><span class="ic">🛠️</span><h4>Craftsmanship</h4><p>Quality materials and careful installation on every roof.</p></div>
+   <div class="rv"><span class="ic">💬</span><h4>Communication</h4><p>You always know what is happening, what it costs, and when it finishes.</p></div>
+  </div></div></section>
+<section><div class="wrap center"><span class="kicker">What we offer</span><h2 class="title">Services built around your property</h2>
+  <div class="grid3" style="text-align:left">${SERVICES.map(svcCard).join("")}</div></div></section>
+${ctaBand()}`,
+
+services:()=>`
+${phero("Our Services","Premium roofing and exterior solutions for homes and businesses in Dallas and Acworth, Georgia.","Services",SERVICES[0].img)}
+<section><div class="wrap center"><span class="kicker">Choose a service</span><h2 class="title">Explore what we do</h2>
+  <p class="lead">Select a service to see the full process, benefits, and how to get started.</p>
+  <div class="grid3" style="text-align:left">${SERVICES.map(svcCard).join("")}</div></div></section>
+${ctaBand()}`,
+
+"roof-types":()=>`
+${phero("Types of Roofs","Compare the most common roofing materials so you can choose the right one for your property and budget.","Types of Roofs",SERVICES[1].img)}
+<section><div class="wrap center"><span class="kicker">Roofing materials</span><h2 class="title">Find the roof that fits your property</h2>
+  <p class="lead">Each material has its own look, lifespan, and cost. We will help you decide during your free estimate.</p>
+  <div class="grid3" style="text-align:left">${ROOFS.map(r=>`<article class="card rtype tilt rv"><div class="im" style="background:${r.c}">${r.e}</div>
+    <div class="bd"><h3>${r.n}</h3><p>${r.d}</p><div class="spec">${r.s.map(x=>`<span>${x}</span>`).join("")}</div>
+    <a class="more" href="#/contact">Ask about this roof <span>→</span></a></div></article>`).join("")}</div></div></section>
+${ctaBand()}`,
+
+areas:()=>`
+${phero("Service Areas","Proudly serving Dallas and Acworth, Georgia, plus the surrounding communities.","Service Areas",SERVICES[3].img)}
+<section><div class="wrap center"><span class="kicker">Where we work</span><h2 class="title">Choose your area</h2>
+  <div class="grid2" style="text-align:left">${Object.entries(AREAS).map(([k,a])=>`<article class="card area-card tilt rv"><div class="pin">📍</div><h3>${a.n}</h3><p style="margin:10px 0 18px">${a.p}</p>
+    <a class="more" href="#/area/${k}">Roofing in ${a.n} <span>→</span></a></article>`).join("")}</div>
+  <div class="towns rv" style="justify-content:center;margin-top:40px">${[...new Set(Object.values(AREAS).flatMap(a=>a.nb))].map(t=>`<span>${t}</span>`).join("")}</div>
+  <p class="lead" style="margin-top:20px">Not sure we cover your address? Call us and we will confirm.</p></div></section>
+<section style="padding-top:0"><div class="wrap"><div class="mapbox rv">${MAP}</div></div></section>
+${ctaBand()}`,
+
+gallery:()=>`
+${phero("Project Gallery","A look at the roofing, cleaning, and exterior work we deliver across Georgia.","Gallery",SERVICES[4].img)}
+<section><div class="wrap"><div class="gal">${SERVICES.map(s=>`<figure class="rv" data-img="${s.img}">${imgTag(s.img,s.name+" project")}<figcaption>${s.icon} ${s.name}</figcaption></figure>`).join("")}</div>
+  <p class="lead" style="margin:20px auto 0;text-align:center">Click any photo to enlarge it.</p></div></section>
+${ctaBand()}`,
+
+contact:()=>`
+${phero("Contact Us","Call, email, or send a message. We are open 24 hours and ready to help.","Contact Us",SERVICES[0].img)}
+<section><div class="wrap cgrid">
+  <div class="cinfo rv">
+    <div class="ci"><div class="i">📍</div><div><h4>Address</h4><p>37 Palace Pt, Dallas, GA 30132</p></div></div>
+    <div class="ci"><div class="i">📞</div><div><h4>Phone</h4><a href="tel:+14707378742">(470) 737-8742</a></div></div>
+    <div class="ci"><div class="i">✉️</div><div><h4>Email</h4><a href="mailto:andrew@apexroofingsolution.net">andrew@apexroofingsolution.net</a></div></div>
+    <div class="ci"><div class="i">🕒</div><div><h4>Working Hours</h4><p>Open 24 Hours</p></div></div>
+    <a class="btn btn-dark" href="https://apexroofingsolutions.net/contact-us/" target="_blank" rel="noopener">Visit our official contact page</a>
+  </div>
+  <form class="cf rv" id="cform"><h3>Request a free estimate</h3>
+    <div class="row2"><input name="name" placeholder="Your name" required aria-label="Your name"><input name="phone" type="tel" placeholder="Phone number" required aria-label="Phone number"></div>
+    <input name="email" type="email" placeholder="Email address" required aria-label="Email address">
+    <select name="service" aria-label="Service">${SERVICES.map(s=>`<option>${s.name}</option>`).join("")}</select>
+    <textarea name="msg" rows="5" placeholder="Tell us about your project" required aria-label="Message"></textarea>
+    <button class="btn btn-gold" type="submit" style="justify-content:center">Send message</button>
+    <small id="fnote" style="color:#9fb0c9"></small>
+  </form>
+</div></section>
+<section style="padding-top:0"><div class="wrap"><div class="mapbox rv">${MAP}</div></div></section>`
+};
+
+function servicePage(id){
+  const s=SERVICES.find(x=>x.id===id); if(!s) return pages.services();
+  return `${phero(s.name,s.intro,`<a href="#/services">Services</a> / ${s.name}`,s.img)}
+  <section><div class="wrap svc-grid">
+    <div class="prose">${imgTag(s.img,s.name+" by Apex Roofing Solutions","big rv")}
+      <span class="kicker">${s.icon} ${s.name}</span>
+      <h2 style="margin-top:0">${s.intro}</h2>
+      ${s.body.map(p=>`<p>${p}</p>`).join("")}
+      <h2>What's included</h2>
+      <ul class="ticks">${s.pts.map(p=>`<li>${p}</li>`).join("")}</ul>
+      <h2>How it works</h2>
+      <div class="steps">${s.steps.map(x=>`<div class="step rv"><div><h4>${x[0]}</h4><p>${x[1]}</p></div></div>`).join("")}</div>
+    </div>
+    <aside class="side"><h3>Get a free quote</h3><p>Talk to a local roofing expert about ${s.name.toLowerCase()}. We answer 24 hours a day.</p>
+      <a class="btn btn-gold" href="tel:+14707378742">📞 (470) 737-8742</a><a class="btn btn-ghost" href="#/contact">Send a message</a>
+      <ul>${SERVICES.map(x=>`<li><a class="${x.id===id?'cur':''}" href="#/service/${x.id}">${x.icon} ${x.name}</a></li>`).join("")}</ul></aside>
+  </div></section>
+  <section style="padding-top:0"><div class="wrap center"><span class="kicker">More services</span><h2 class="title">Explore other services</h2>
+    <div class="grid3" style="text-align:left">${SERVICES.filter(x=>x.id!==id).slice(0,3).map(svcCard).join("")}</div></div></section>
+  ${ctaBand()}`;
+}
+function areaPage(k){
+  const a=AREAS[k]; if(!a) return pages.areas();
+  return `${phero(a.t,a.p,`<a href="#/areas">Service Areas</a> / ${a.n}`,a.img)}
+  <section><div class="wrap center"><span class="kicker">Services in ${a.n}</span><h2 class="title">Everything we offer in ${a.n}</h2>
+    <div class="grid3" style="text-align:left">${SERVICES.map(svcCard).join("")}</div>
+    <h3 style="font-size:2rem;margin-top:60px">Nearby communities we serve</h3>
+    <div class="towns" style="justify-content:center">${a.nb.map(t=>`<span>${t}</span>`).join("")}</div></div></section>
+  <section style="padding-top:0"><div class="wrap"><div class="mapbox rv">${MAP}</div></div></section>${ctaBand()}`;
+}
+
+/* ================= ROUTER ================= */
+const TITLES={home:"Apex Roofing Solutions | Roofing in Dallas & Acworth, GA",about:"About Us",services:"Services","roof-types":"Types of Roofs",areas:"Service Areas",gallery:"Gallery",contact:"Contact Us"};
+function route(){
+  const [a,b]=(location.hash||"#/home").replace("#/","").split("/");
+  const app=$("#app");
+  let html,key=a;
+  if(a==="service"){html=servicePage(b);key="services"}
+  else if(a==="area"){html=areaPage(b);key="areas"}
+  else if(pages[a]){html=pages[a]()}
+  else{html=pages.home();key="home"}
+  app.innerHTML=html;
+  app.style.animation="none";app.offsetHeight;app.style.animation="";
+  window.scrollTo(0,0);
+  $$("nav a.l").forEach(l=>l.classList.toggle("active",l.dataset.r===key));
+  document.title=(TITLES[key]||"Apex Roofing Solutions")+(key==="home"?"":" | Apex Roofing Solutions");
+  initPage();
+}
+function initPage(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+  $$(".rv").forEach((el,i)=>{el.style.transitionDelay=(i%3)*.1+"s";io.observe(el)});
+  $$("[data-c]").forEach(el=>{const t=+el.dataset.c,s=el.dataset.s||"";let n=0;const st=setInterval(()=>{n+=Math.ceil(t/40);if(n>=t){n=t;clearInterval(st)}el.textContent=n+s},40)});
+  $$(".tilt").forEach(c=>{
+    c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      c.style.transitionDelay="0s";c.style.transform=`perspective(900px) rotateY(${x*9}deg) rotateX(${-y*9}deg) translateY(-6px)`});
+    c.addEventListener("mouseleave",()=>c.style.transform="");
+  });
+  const f=$("#frame");
+  if(f){const v=f.parentElement;
+    v.addEventListener("mousemove",e=>{const r=f.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;f.style.transform=`rotateY(${x*14}deg) rotateX(${-y*14}deg)`});
+    v.addEventListener("mouseleave",()=>f.style.transform="")}
+  $$(".fq button").forEach(b=>b.addEventListener("click",()=>{
+    const q=b.parentElement,open=q.classList.contains("open");
+    $$(".fq").forEach(x=>{x.classList.remove("open");x.querySelector(".a").style.maxHeight=0;x.querySelector("button").setAttribute("aria-expanded","false")});
+    if(!open){q.classList.add("open");const a=q.querySelector(".a");a.style.maxHeight=a.scrollHeight+"px";b.setAttribute("aria-expanded","true")}}));
+  $$(".gal figure").forEach(fg=>fg.addEventListener("click",()=>{$("#lb img").src=fg.dataset.img;$("#lb").classList.add("on")}));
+  const cf=$("#cform");
+  if(cf)cf.addEventListener("submit",e=>{e.preventDefault();const d=new FormData(cf);
+    const body=`Name: ${d.get("name")}\nPhone: ${d.get("phone")}\nEmail: ${d.get("email")}\nService: ${d.get("service")}\n\n${d.get("msg")}`;
+    $("#fnote").textContent="Opening your email app to send this message...";
+    location.href=`mailto:andrew@apexroofingsolution.net?subject=${encodeURIComponent("Estimate request: "+d.get("service"))}&body=${encodeURIComponent(body)}`});
+}
+
+/* ================= SHELL ================= */
+$("#ddServices").innerHTML=SERVICES.map(s=>`<a href="#/service/${s.id}">${s.icon} ${s.name}</a>`).join("")+`<a href="#/services"><b>View all services</b></a>`;
+$("#footSvc").innerHTML=SERVICES.map(s=>`<li><a href="#/service/${s.id}">${s.name}</a></li>`).join("");
+$("#yr").textContent=new Date().getFullYear();
+const closeNav=()=>{$("#nav").classList.remove("open");$("#burger").textContent="☰"};
+$("#burger").onclick=()=>{const n=$("#nav");n.classList.toggle("open");$("#burger").textContent=n.classList.contains("open")?"✕":"☰"};
+$("#nav").addEventListener("click",e=>{if(e.target.closest("a"))closeNav()});
+$("#lb").onclick=()=>$("#lb").classList.remove("on");
+$("#toTop").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+addEventListener("scroll",()=>{$("#hdr").classList.toggle("solid",scrollY>50);$("#toTop").classList.toggle("on",scrollY>600)},{passive:true});
+addEventListener("hashchange",()=>{closeNav();route()});
+
+/* ================= INTRO SEQUENCE ================= */
+(function(){
+  const intro=$("#intro"),name="APEX ROOFING SOLUTIONS",typed=$("#typed"),hud=$("#hud"),bar=$("#pbar");
+  const msgs=["Scanning roofline...","Loading inspection tools...","Calibrating replacement systems...","Preparing your free estimate...","Ready."];
+  let i=0,p=0,finished=false;
+  const type=setInterval(()=>{typed.textContent=name.slice(0,++i);if(i>=name.length)clearInterval(type)},70);
+  const prog=setInterval(()=>{p=Math.min(100,p+2.2);bar.style.width=p+"%";hud.textContent=msgs[Math.min(msgs.length-1,Math.floor(p/21))]+" "+Math.floor(p)+"%";if(p>=100){clearInterval(prog);setTimeout(end,500)}},90);
+  function end(){if(finished)return;finished=true;clearInterval(type);clearInterval(prog);intro.classList.add("done");document.body.style.overflow="";setTimeout(()=>intro.remove(),1000)}
+  document.body.style.overflow="hidden";
+  $("#skip").onclick=end;
+  route();
+})();
+</script>
+</body>
+</html>
